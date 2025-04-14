@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connor's HTML Learning Site</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .cta-btn {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .cta-btn:hover {
+            background-color: #e55347;
+        }
+        .intro-section {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .intro-box {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,7 +87,21 @@
     
     <main>
         <h2>Learn the Basics of HTML</h2>
-        <p>This site will help you get started with HTML. Explore the topics in the menu above to learn about HTML structure, tags, forms, and more!</p>
+        <p>Welcome to your first step in learning web development! This site will help you understand the fundamentals of HTML, from structure to forms and beyond.</p>
+        
+        <div class="intro-section">
+            <div class="intro-box">
+                <h3>HTML Structure</h3>
+                <p>Learn the essential components of an HTML document.</p>
+            </div>
+            <div class="intro-box">
+                <h3>HTML Tags</h3>
+                <p>Get familiar with different HTML tags and how to use them.</p>
+            </div>
+        </div>
+
+        <p>Click the button below to get started on your HTML learning journey!</p>
+        <a href="html_structure.html" class="cta-btn">Start Learning HTML</a>
     </main>
 
     <footer>
