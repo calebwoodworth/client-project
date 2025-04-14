@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Forms</title>
+    <title>HTML Forms - Connor's HTML Learning Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,21 +19,23 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
-        <h2>Creating Forms in HTML</h2>
-        <p>HTML forms are used to collect user input. They contain different elements such as text fields, radio buttons, checkboxes, and submit buttons.</p>
-        <form action="#" method="POST">
+        <h2>HTML Forms</h2>
+        <p>Forms are used to collect user input. Here’s a basic example of a form:</p>
+        <form action="/submit-form" method="POST">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <br><br>
-
+            <input type="text" id="name" name="name" required><br><br>
+            
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <br><br>
-
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
             <input type="submit" value="Submit">
         </form>
+        <p>This form collects a user's name, email, and message. The action attribute specifies where the form data will be sent upon submission.</p>
     </main>
 
     <footer>
