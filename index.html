@@ -63,19 +63,25 @@
             width: 45%;
             text-align: center;
         }
-        .project-overview {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #e8f5e9;
-            border: 1px solid #c8e6c9;
-            border-radius: 8px;
-        }
         footer {
             background-color: #333;
             color: white;
             padding: 10px 0;
             text-align: center;
         }
+        /* Site Map Styling */
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        section h2 {
+            color: #4CAF50;
+        }
+
     </style>
 </head>
 <body>
@@ -96,14 +102,6 @@
         <h2>Learn the Basics of HTML</h2>
         <p>Welcome, Connor, to your first step in learning web development! This site will help you understand the fundamentals of HTML, from structure to forms and beyond.</p>
         
-        <!-- ✅ Project Overview Section -->
-        <section class="project-overview">
-            <h2>Project Overview</h2>
-            <p><strong>Function/Purpose:</strong> This website is designed to help beginners, specifically Connor, learn the basics of HTML in a structured and user-friendly way. It serves as a personal learning tool and a demonstration of web development skills.</p>
-            <p><strong>Intended Users:</strong> The primary user is Connor, but it's also useful for other beginners who are new to HTML and want a simple introduction.</p>
-            <p><strong>Website Content Overview:</strong> The site includes sections on HTML structure, tags, forms, and links to helpful learning resources. Each section provides explanations and examples to guide users through foundational HTML concepts.</p>
-        </section>
-
         <div class="intro-section">
             <div class="intro-box">
                 <h3>HTML Structure</h3>
@@ -118,6 +116,24 @@
         <p>Click the button below to get started on your HTML learning journey!</p>
         <a href="html_structure.html" class="cta-btn">Start Learning HTML</a>
     </main>
+
+    <!-- Site Map Section -->
+    <section>
+        <h2>Site Map</h2>
+        <ul>
+            <li><a href="index.html">Home</a> – The main landing page that introduces the site.</li>
+            <li><a href="html_structure.html">HTML Structure</a> – Linked from Home and navigation bar.</li>
+            <li><a href="tags.html">HTML Tags</a> – Linked from Home and navigation bar.</li>
+            <li><a href="forms.html">HTML Forms</a> – Linked from Home and navigation bar.</li>
+            <li><a href="resources.html">Learning Resources</a> – Linked from Home and navigation bar.</li>
+        </ul>
+        <p>All pages are accessible from the navigation bar on every page, allowing easy access to all content.</p>
+        <p>You can also visit the site online: 
+            <a href="https://webpages.charlotte.edu/cwoodwor/client-project/" target="_blank">
+                webpages.charlotte.edu/cwoodwor/client-project/
+            </a>
+        </p>
+    </section>
 
     <footer>
         <p>&copy; 2025 Connor Woodworth's Learning Website</p>
