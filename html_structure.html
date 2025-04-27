@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Structure - Connor's HTML Learning Site</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleInfo() {
+            const infoSection = document.getElementById("pageInfo");
+            const toggleButton = document.getElementById("toggleButton");
+
+            if (infoSection.style.display === "none") {
+                infoSection.style.display = "block";
+                toggleButton.textContent = "Hide Page Information";
+            } else {
+                infoSection.style.display = "none";
+                toggleButton.textContent = "Show Page Information";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -46,7 +60,8 @@
         </ul>
 
         <h3>Page Information</h3>
-        <ul>
+        <button id="toggleButton" onclick="toggleInfo()">Hide Page Information</button>
+        <ul id="pageInfo">
             <li><strong>Page Name:</strong> HTML Structure</li>
             <li><strong>Purpose of Page:</strong> To teach the basic structure of an HTML document and explain its key elements.</li>
             <li><strong>Audience:</strong> Beginners learning HTML and web development.</li>
