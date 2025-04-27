@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Previous styles omitted for brevity */
+        .change-bg-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .change-bg-btn:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +58,12 @@
 
         <p>Click the button below to get started on your HTML learning journey!</p>
         <a href="html_structure.html" class="cta-btn">Start Learning HTML</a>
-        
+
+        <!-- New Button to Change Background -->
+        <div>
+            <button class="change-bg-btn" onclick="changeBackground()">Change Background Color!</button>
+        </div>
+
         <!-- New Section: Dynamic Functionality, Purpose, and URLs -->
         <section>
             <h2>Dynamic Functionality, Purpose, and Example URLs</h2>
@@ -77,5 +98,20 @@
     <footer>
         <p>&copy; 2025 Connor Woodworth's Learning Website</p>
     </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        // Show a welcome alert when the page loads
+        window.onload = function() {
+            alert("Welcome to Connor's HTML Learning Site!");
+        };
+
+        // Function to change background color randomly
+        function changeBackground() {
+            const colors = ["#f4f4f4", "#e0f7fa", "#ffecb3", "#f8bbd0", "#c8e6c9"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
 </body>
 </html>
