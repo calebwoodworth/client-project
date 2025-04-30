@@ -16,3 +16,16 @@ function changeBackground() {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.body.style.backgroundColor = randomColor;
 }
+
+function toggleInfo() {
+    const infoSection = document.getElementById("pageInfo");
+    const toggleButton = document.getElementById("toggleButton");
+
+    if (infoSection.style.display === "none") {
+        infoSection.style.display = "block";
+        toggleButton.textContent = "Hide Page Information";
+    } else {
+        infoSection.style.display = "none";
+        toggleButton.textContent = "Show Page Information";
+    }
+}
