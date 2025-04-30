@@ -100,16 +100,21 @@
             loadHTML("components/footer.html", "footer");
         };
 
-        // Function to load HTML content into the specified element
+        // Function to load HTML content into the specified element using fetch API
         function loadHTML(file, elementId) {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState === 4 && this.status === 200) {
-                    document.getElementById(elementId).innerHTML = this.responseText;
-                }
-            };
-            xhttp.open("GET", file, true);
-            xhttp.send();
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
         }
 
         // Function to change background color randomly
