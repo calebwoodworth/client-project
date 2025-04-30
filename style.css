@@ -158,3 +158,36 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
+/* Validator Section Styling */
+.validator-section {
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.validator-section h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.validator-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.validator-img {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.validator-img:hover {
+    transform: scale(1.1);
+}

@@ -23,11 +23,44 @@
         .change-bg-btn:hover {
             background-color: #45a049;
         }
+
+        /* Validator Section Styling */
+        .validator-section {
+            background-color: #f4f4f4;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .validator-section h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .validator-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .validator-img {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .validator-img:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcme to Connor's HTML Learning Site</h1>
+        <h1>Welcome to Connor's HTML Learning Site</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -37,7 +70,6 @@
                 <li><a href="resources.html">Learning Resources</a></li>
             </ul>
         </nav>
-        
     </header>
     
     <main>
@@ -114,15 +146,19 @@
             document.body.style.backgroundColor = randomColor;
         }
     </script>
-     <!-- HTML Validator Image -->
-    <a href="https://validator.w3.org/detailed.html" target="_blank">
-        <img src="https://validator.w3.org/detailed.html" alt="HTML5">
-    </a>
 
-    <!-- CSS Validator Image -->
-    <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
-        <img src="https://jigsaw.w3.org/css-validator/" alt="CSS3">
-    </a>
+    <!-- Validator Section -->
+    <section class="validator-section">
+        <h3>Validate Your HTML & CSS</h3>
+        <div class="validator-container">
+            <a href="https://validator.w3.org/detailed.html" target="_blank">
+                <img class="validator-img" src="https://validator.w3.org/images/vhnd.png" alt="HTML5 Validator">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">
+                <img class="validator-img" src="https://jigsaw.w3.org/css-validator/images/vcss-blue.png" alt="CSS3 Validator">
+            </a>
+        </div>
+    </section>
 
 </body>
 </html>
