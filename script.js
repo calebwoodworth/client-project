@@ -4,3 +4,15 @@
 document.querySelector('form').addEventListener('submit', function(event) {
     alert('Form submitted successfully!');
 });
+
+// Show a welcome alert when the page loads
+window.onload = function() {
+    alert("Welcome to Connor's HTML Learning Site!");
+};
+
+// Function to change background color randomly
+function changeBackground() {
+    const colors = ["#f4f4f4", "#e0f7fa", "#ffecb3", "#f8bbd0", "#c8e6c9"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = randomColor;
+}
