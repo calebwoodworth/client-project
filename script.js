@@ -1,14 +1,13 @@
-// script.js for adding functionality (e.g., form validation or interactivity)
 
-// Example: Simple alert when form is submitted
 document.querySelector('form').addEventListener('submit', function(event) {
     alert('Form submitted successfully!');
 });
 
 // Show a welcome alert when the page loads
-window.onload = function() {
+window.addEventListener('load', function() {
     alert("Welcome to Connor's HTML Learning Site!");
-};
+});
+
 
 // Function to change background color randomly
 function changeBackground() {
