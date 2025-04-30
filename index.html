@@ -93,14 +93,12 @@
 
     <!-- JavaScript Section -->
     <script>
-        // Show a welcome alert when the page loads
-        window.onload = function() {
+        window.addEventListener('DOMContentLoaded', function() {
             alert("Welcome to Connor's HTML Learning Site!");
             loadHTML("components/header.html", "header");
             loadHTML("components/footer.html", "footer");
-        };
+        });
 
-        // Function to load HTML content into the specified element using fetch API
         function loadHTML(file, elementId) {
             fetch(file)
                 .then(response => {
@@ -117,7 +115,6 @@
                 });
         }
 
-        // Function to change background color randomly
         function changeBackground() {
             const colors = ["#f4f4f4", "#e0f7fa", "#ffecb3", "#f8bbd0", "#c8e6c9"];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
