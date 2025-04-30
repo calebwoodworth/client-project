@@ -33,7 +33,7 @@
     
     <main>
         <p><strong>Client Information:</strong></p>
-        <p>Connor is a senior in high school. Next year he will be attending UNCC majoring in computer science. I want to give him a head start in learning HTML.</p>
+        <p>Connor is a senior in high school. Next year he will be attending UNC Charlotte majoring in computer science. I want to give him a head start in learning HTML.</p>
         <h2>Learn the Basics of HTML</h2>
         <p>Welcome, Connor, to your first step in learning web development! This site will help you understand the fundamentals of HTML, from structure to forms and beyond.</p>
         
@@ -93,12 +93,14 @@
 
     <!-- JavaScript Section -->
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
+        // Show a welcome alert when the page loads
+        window.onload = function() {
             alert("Welcome to Connor's HTML Learning Site!");
             loadHTML("components/header.html", "header");
             loadHTML("components/footer.html", "footer");
-        });
+        };
 
+        // Function to load HTML content into the specified element using fetch API
         function loadHTML(file, elementId) {
             fetch(file)
                 .then(response => {
@@ -115,6 +117,7 @@
                 });
         }
 
+        // Function to change background color randomly
         function changeBackground() {
             const colors = ["#f4f4f4", "#e0f7fa", "#ffecb3", "#f8bbd0", "#c8e6c9"];
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
