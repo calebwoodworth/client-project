@@ -26,10 +26,15 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Connor's HTML Learning Site!</h1>
     <header>
-        <div id="header"></div>
-        <div data-include="components/header.html"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html_structure.html">HTML Structure</a></li>
+                <li><a href="tags.html">HTML Tags</a></li>
+            </ul>
+        </nav>
+        
     </header>
     
     <main>
@@ -89,9 +94,7 @@
     </section>
 
     <footer>
-        <div id="footer"></div>
-        <div data-include="components/footer.html"></div>
-
+        <p>&copy; 2025 Connor's HTML Learning Site. All rights reserved.</p>
     </footer>
 
     <!-- JavaScript Section -->
@@ -99,26 +102,7 @@
         // Show a welcome alert when the page loads
         window.onload = function() {
             alert("Welcome to Connor's HTML Learning Site!");
-            loadHTML("components/header.html", "header");
-            loadHTML("components/footer.html", "footer");
         };
-
-        // Function to load HTML content into the specified element using fetch API
-        function loadHTML(file, elementId) {
-            fetch(file)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById(elementId).innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
-                });
-        }
 
         // Function to change background color randomly
         function changeBackground() {
