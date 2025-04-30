@@ -5,23 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Tags - Connor's HTML Learning Site</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function filterTags() {
-            const searchInput = document.getElementById('searchBar').value.toLowerCase();
-            const tagsList = document.getElementById('tagsList');
-            const tags = tagsList.getElementsByTagName('li');
-
-            for (let i = 0; i < tags.length; i++) {
-                const tag = tags[i];
-                const tagName = tag.textContent || tag.innerText;
-                if (tagName.toLowerCase().includes(searchInput)) {
-                    tag.style.display = '';
-                } else {
-                    tag.style.display = 'none';
-                }
-            }
-        }
-    </script>
+    <!-- Link to script.js -->
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -42,7 +27,7 @@
         <p>HTML tags are used to create elements on a web page. Below are some common HTML tags:</p>
         
         <!-- Search Bar -->
-        <input type="text" id="searchBar" onkeyup="filterTags()" placeholder="Search for a tag...">
+        <input type="text" id="searchBar" onkeyup="filterTags()" placeholder="Search for a tag:">
         
         <ul id="tagsList">
             <li><code>&lt;div&gt;</code>: Defines a division or section.</li>

@@ -29,3 +29,19 @@ function toggleInfo() {
         toggleButton.textContent = "Show Page Information";
     }
 }
+
+function filterTags() {
+    const searchInput = document.getElementById('searchBar').value.toLowerCase();
+    const tagsList = document.getElementById('tagsList');
+    const tags = tagsList.getElementsByTagName('li');
+
+    for (let i = 0; i < tags.length; i++) {
+        const tag = tags[i];
+        const tagName = tag.textContent || tag.innerText;
+        if (tagName.toLowerCase().includes(searchInput)) {
+            tag.style.display = '';
+        } else {
+            tag.style.display = 'none';
+        }
+    }
+}
