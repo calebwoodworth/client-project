@@ -37,6 +37,7 @@
                 <li><a href="resources.html">Learning Resources</a></li>
             </ul>
         </nav>
+        
     </header>
     
     <main>
@@ -95,6 +96,10 @@
         </p>
     </section>
 
+    <footer>
+        <p>&copy; 2025 Connor's HTML Learning Site. All rights reserved.</p>
+    </footer>
+
     <!-- JavaScript Section -->
     <script>
         // Show a welcome alert when the page loads
@@ -108,22 +113,6 @@
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
             document.body.style.backgroundColor = randomColor;
         }
-
-        // Function to load the footer dynamically
-        function loadFooter() {
-            fetch('components/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.body.insertAdjacentHTML('beforeend', data);
-                })
-                .catch(error => console.error('Error loading footer:', error));
-        }
-
-        // Call the loadFooter function when the page loads
-        window.onload = function() {
-            alert("Welcome to Connor's HTML Learning Site!");
-            loadFooter(); // Load the footer dynamically
-        };
     </script>
 </body>
 </html>
