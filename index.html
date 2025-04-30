@@ -28,7 +28,7 @@
 <body>
     <h1>Welcome to Connor's HTML Learning Site!</h1>
     <header>
-        <div data-include="components/header.html"></div>
+        <div id="header"></div>
     </header>
     
     <main>
@@ -88,7 +88,7 @@
     </section>
 
     <footer>
-        <div data-include="components/footer.html"></div>
+        <div id="footer"></div>
     </footer>
 
     <!-- JavaScript Section -->
@@ -96,7 +96,21 @@
         // Show a welcome alert when the page loads
         window.onload = function() {
             alert("Welcome to Connor's HTML Learning Site!");
+            loadHTML("components/header.html", "header");
+            loadHTML("components/footer.html", "footer");
         };
+
+        // Function to load HTML content into the specified element
+        function loadHTML(file, elementId) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById(elementId).innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", file, true);
+            xhttp.send();
+        }
 
         // Function to change background color randomly
         function changeBackground() {
